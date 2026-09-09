@@ -23,8 +23,16 @@ public class Oblig1 {
         return a[a.length - 1];
     }
 
-    public static int ombyttinger(int[] a) {throw new UnsupportedOperationException();}
-
+    public static int ombyttinger(int[] a) {
+        int antall = 0;
+        for (int i = 0; i < a.length-1; i++) {
+            if (a[i] > a[i + 1]) {
+                bytt(a, i, i+1);
+                antall++;
+            }
+        }
+        return antall;
+    }
     // Oppgave 2
     public static int antallUlikeSortert(int[] a) {throw new UnsupportedOperationException();}
 
