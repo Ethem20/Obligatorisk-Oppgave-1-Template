@@ -11,7 +11,17 @@ public class Oblig1 {
     }
 
     // Oppgave 1
-    public static int maks(int[] a) {throw new UnsupportedOperationException();}
+    public static int maks(int[] a) {
+        if (a.length == 0) {
+            throw new NoSuchElementException("Tom tabell, ingen største verdi!");
+        }
+        for (int i = 0; i < a.length - 1; i++) {
+            if (a[i] > a[i + 1]) {
+                bytt(a, i, i + 1);
+            }
+        }
+        return a[a.length - 1];
+    }
 
     public static int ombyttinger(int[] a) {throw new UnsupportedOperationException();}
 
