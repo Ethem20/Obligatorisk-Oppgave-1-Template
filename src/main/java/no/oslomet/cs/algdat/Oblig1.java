@@ -1,13 +1,14 @@
 package no.oslomet.cs.algdat;
 
+import java.util.NoSuchElementException;
+
 public class Oblig1 {
 
     private Oblig1() {}
 
     // Oppgave 0
     public static int gruppeMedlemmer() {
-        throw new UnsupportedOperationException();
-        // Skal returne hvor mange som er i gruppa deres.
+        return 1;
     }
 
     // Oppgave 1
@@ -64,4 +65,11 @@ public class Oblig1 {
 
     // Oppgave 11
     public static boolean inneholdt(String a, String b) {throw new UnsupportedOperationException();}
+
+    //La til bytt funksjon
+    private static void bytt(int[] a, int i, int j) {
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
 }
