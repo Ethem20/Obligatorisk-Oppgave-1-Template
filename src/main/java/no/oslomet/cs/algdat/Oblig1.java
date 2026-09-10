@@ -79,7 +79,46 @@ public class Oblig1 {
     }
 
     // Oppgave 4
-    public static void sorter(int[] a, int fra, int til) {throw new UnsupportedOperationException();}
+
+    public static void sorter(int[] a, int fra, int til) {
+
+        if (fra < 0 || til > a.length) {
+            throw new IndexOutOfBoundsException("Ugyldig fra og til verdi.");
+        }
+
+        if (fra >= til) {
+            return;
+        }
+
+        quicksort(a, fra, til - 1);
+    }
+
+    private static void quicksort(int[] a, int venstre, int høyre) {
+
+        int i = venstre;
+        int j = høyre;
+        int pivot = a[venstre + (høyre - venstre) / 2];
+
+        while (i <= j) {
+            while (a[i] < pivot) {
+                i++;
+            }
+            while (a[j] > pivot) {
+                j--;
+            }
+            if (i <= j) {
+                bytt(a, i, j);
+                i++;
+                j--;
+            }
+        }
+        if (venstre < j) {
+            quicksort(a, venstre, j);
+        }
+        if (i < høyre) {
+            quicksort(a, i, høyre);
+        }
+    }
 
     // Oppgave 5
     public static void delsortering(int[] a) {throw new UnsupportedOperationException();}
