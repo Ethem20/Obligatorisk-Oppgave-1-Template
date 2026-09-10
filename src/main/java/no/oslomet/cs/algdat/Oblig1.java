@@ -59,7 +59,24 @@ public class Oblig1 {
 
 
     // Oppgave 3
-    public static int antallUlikeUsortert(int[] a) {throw new UnsupportedOperationException();}
+
+     // For hvert element ser vi bakover i tabellen for å se om vi har sett verdien før. Har vi ikke det er det en ny, ulik verdi.
+     // Bruker ikke hjelpetabeller, bare vanlige tellevariabler.
+
+    public static int antallUlikeUsortert(int[] a) {
+        int antall = 0;
+        for (int i = 0; i < a.length; i++) {
+            boolean settFor = false;
+            for (int j = 0; j < i; j++) {
+                if (a[j] == a[i]) {
+                    settFor = true;
+                    break;
+                }
+            }
+            if (!settFor) antall++;
+        }
+        return antall;
+    }
 
     // Oppgave 4
     public static void sorter(int[] a, int fra, int til) {throw new UnsupportedOperationException();}
