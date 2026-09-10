@@ -35,7 +35,28 @@ public class Oblig1 {
         return antall;
     }
     // Oppgave 2
-    public static int antallUlikeSortert(int[] a) {throw new UnsupportedOperationException();}
+
+     //Går gjennom tabellen en gang. Kaster feil hvis den ikke er sortert.
+     //Teller opp antall ganger verdien endrer seg fra en plass til neste.
+
+    public static int antallUlikeSortert(int[] a) {
+        if (a.length == 0) return 0;
+
+        for (int i = 0; i < a.length - 1; i++) {
+            if (a[i] > a[i + 1]) {
+                throw new IllegalStateException("Tabellen er ikke sortert i stigenderekkefølge");
+            }
+        }
+
+        int antall = 1;
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] != a[i - 1]) {
+                antall++;
+            }
+        }
+        return antall;
+    }
+
 
     // Oppgave 3
     public static int antallUlikeUsortert(int[] a) {throw new UnsupportedOperationException();}
