@@ -21,3 +21,12 @@ I oppgave 3 gikk jeg frem ved å se på hvert element i tabellen, se bakover på
 
 ### Oppgave 4
 I oppgave 4 gikk jeg frem ved å bruke quicksort til å sortere intervallet (fra, til). Quicksort velger et pivot element, flytter alt som er mindre enn pivot til venstre og alt som er større til høyre, og gjør dette rekursivt på de to delene. Jeg bytter inn et tilfeldig pivot element for å unngå at algoritmen blir treg på visse tabeller. Metoden kaster Exception hvis fra er negativ eller til er større enn tabellens lengde.
+
+### Oppgave 5
+I oppgave 5 gikk jeg frem ved å først flytte alle oddetall fremst i tabellen og alle partall bakerst, ved å bytte plass på elementer mens jeg går gjennom tabellen en gang. Deretter bruker jeg sorter()metoden fra oppgave 4 på hver av de to delene for seg, slik at oddetallene blir sortert stigende til venstre og partallene sortert stigende til høyre.
+
+### Oppgave 6
+I oppgave 6 gikk jeg frem ved å ta det siste elementet i tabellen og huske det i en variabel, deretter skyve alle de andre elementene ett hakk til høyre, og til slutt sette det huskede elementet først i tabellen.
+
+### Oppgave 8
+I oppgave 8 brukte jeg 2 metoder, i den første metoden, gikk jeg gjennom begge strengene samtidig og legge til ett tegn fra hver streng etter tur, helt til en av dem er tom. Resten av den lengste strengen limte jeg på til slutt. I den andre metoden gjorde jeg det samme, men for flere strenger: jeg går gjennom "bokstavplass for bokstavplass", og for hver plass går jeg gjennom alle strengene og legger til bokstaven hvis strengen fortsatt har en bokstav der.
