@@ -177,7 +177,24 @@ public class Oblig1 {
     }
     //Går gjennom bokstavplass for bokstavplass j, og for hver plass går jeg gjennom alle strengene i og henter bokstaven der hvis den finnes. Strenger som er tomme på den plassen blir bare hoppet over.
 
-    public static String flett(String... s) {throw new UnsupportedOperationException();}
+    public static String flett(String... s) {
+        int lengste = 0;
+        for (String streng : s) {
+            if (streng.length() > lengste) {
+                lengste = streng.length();
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int j = 0; j < lengste; j++) {
+            for (String streng : s) {
+                if (j < streng.length()) {
+                    sb.append(streng.charAt(j));
+                }
+            }
+        }
+        return sb.toString();
+    }
 
     // Oppgave 9
     public static int[] indeksSortering(int[] a) {throw new UnsupportedOperationException();}
