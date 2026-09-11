@@ -157,7 +157,25 @@ public class Oblig1 {
     public static void rotasjon(char[] a, int k) {throw new UnsupportedOperationException();}
 
     // Oppgave 8
-    public static String flett(String s, String t) {throw new UnsupportedOperationException();}
+    //Bytter på tegn fra s og t helt til en av dem er tom, og limer resten av den lengste strengen på til slutt.
+
+    public static String flett(String s, String t) {
+        StringBuilder sb = new StringBuilder();
+        int i = 0;
+        while (i < s.length() && i < t.length()) {
+            sb.append(s.charAt(i));
+            sb.append(t.charAt(i));
+            i++;
+        }
+        if (i < s.length()) {
+            sb.append(s.substring(i));
+        }
+        if (i < t.length()) {
+            sb.append(t.substring(i));
+        }
+        return sb.toString();
+    }
+    //Går gjennom bokstavplass for bokstavplass j, og for hver plass går jeg gjennom alle strengene i og henter bokstaven der hvis den finnes. Strenger som er tomme på den plassen blir bare hoppet over.
 
     public static String flett(String... s) {throw new UnsupportedOperationException();}
 
