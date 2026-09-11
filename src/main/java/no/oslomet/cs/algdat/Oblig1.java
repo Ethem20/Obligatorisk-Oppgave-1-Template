@@ -141,7 +141,17 @@ public class Oblig1 {
     }
 
     // Oppgave 6
-    public static void rotasjon(char[] a) {throw new UnsupportedOperationException();}
+    //Tar det siste elementet og setter det først, og skyver alle andre elementer ett hakk til høyre
+    public static void rotasjon(char[] a) {
+        if (a.length <= 1) return;
+
+        char siste = a[a.length - 1];
+        for (int i = a.length - 1; i > 0; i--) {
+            a[i] = a[i - 1];
+        }
+        a[0] = siste;
+    }
+
 
     // Oppgave 7
     public static void rotasjon(char[] a, int k) {throw new UnsupportedOperationException();}
