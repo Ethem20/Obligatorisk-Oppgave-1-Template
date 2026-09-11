@@ -121,7 +121,24 @@ public class Oblig1 {
     }
 
     // Oppgave 5
-    public static void delsortering(int[] a) {throw new UnsupportedOperationException();}
+
+     // Flytter først alle oddetall fremst i tabellen (partall bakerst),og sorterer så de to delene hver for seg med sorter()
+    public static void delsortering(int[] a) {
+        int grense = flyttOddetallFremst(a);
+        sorter(a, 0, grense);
+        sorter(a, grense, a.length);
+    }
+
+    private static int flyttOddetallFremst(int[] a) {
+        int i = 0;
+        for (int j = 0; j < a.length; j++) {
+            if (a[j] % 2 != 0) { // Negative tall funker
+                bytt(a, i, j);
+                i++;
+            }
+        }
+        return i;
+    }
 
     // Oppgave 6
     public static void rotasjon(char[] a) {throw new UnsupportedOperationException();}
